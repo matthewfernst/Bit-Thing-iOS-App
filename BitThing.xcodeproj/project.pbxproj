@@ -17,6 +17,7 @@
 		34DCF59327DD9D0F0056094C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DCF59127DD9D0F0056094C /* Main.storyboard */; };
 		34DCF59527DD9D100056094C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DCF59427DD9D100056094C /* Assets.xcassets */; };
 		34DCF59827DD9D100056094C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DCF59627DD9D100056094C /* LaunchScreen.storyboard */; };
+		34F6EA7C27E818AF00EF486D /* shape.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34F6EA7B27E818AF00EF486D /* shape.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		34DCF59427DD9D100056094C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34DCF59727DD9D100056094C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34DCF59927DD9D100056094C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F6EA7B27E818AF00EF486D /* shape.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shape.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +93,15 @@
 		34DCF58A27DD9D0F0056094C /* BitThing */ = {
 			isa = PBXGroup;
 			children = (
+				34F6EA7B27E818AF00EF486D /* shape.gif */,
 				34CF79AE27E7D61000D27D43 /* AppDelegate.swift */,
 				34CF79AC27E7D48B00D27D43 /* Constants.swift */,
 				34CF79B027E7D63600D27D43 /* SceneDelegate.swift */,
 				34CF78A527E7C2F400D27D43 /* GifToImage.swift */,
-				34DCF59127DD9D0F0056094C /* Main.storyboard */,
-				34DCF59427DD9D100056094C /* Assets.xcassets */,
-				34DCF59627DD9D100056094C /* LaunchScreen.storyboard */,
 				34CF79B227E7D66600D27D43 /* ViewController.swift */,
+				34DCF59127DD9D0F0056094C /* Main.storyboard */,
+				34DCF59627DD9D100056094C /* LaunchScreen.storyboard */,
+				34DCF59427DD9D100056094C /* Assets.xcassets */,
 				34DCF59927DD9D100056094C /* Info.plist */,
 			);
 			path = BitThing;
@@ -163,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F6EA7C27E818AF00EF486D /* shape.gif in Resources */,
 				34DCF59827DD9D100056094C /* LaunchScreen.storyboard in Resources */,
 				34DCF59527DD9D100056094C /* Assets.xcassets in Resources */,
 				34DCF59327DD9D0F0056094C /* Main.storyboard in Resources */,

@@ -57,6 +57,12 @@ class ViewController: UIViewController {
     private var lastPlayerState: SPTAppRemotePlayerState?
 
     // MARK: - Subviews
+    private lazy var loginBackgroundGif: UIImageView = {
+        let background = UIImageView()
+        background.loadGif(name: "shape")
+        background.frame = CGRect(x: 10, y: 100, width: 400, height: 500)
+        return background
+    }()
 
     private lazy var connectLabel: UILabel = {
         let label = UILabel()
@@ -70,6 +76,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor(red:(29.0 / 255.0), green:(185.0 / 255.0), blue:(84.0 / 255.0), alpha:1.0)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.contentMode = .center
         button.contentEdgeInsets = UIEdgeInsets(top: 11.75, left: 32.0, bottom: 11.75, right: 32.0)
         button.layer.cornerRadius = 20.0
         button.setTitle("Continue with Spotify", for: .normal)
@@ -126,7 +133,7 @@ class ViewController: UIViewController {
     
     //MARK: Methods
     func setupViews() {
-        view.backgroundColor = UIColor.white
+        view.addSubview(loginBackgroundGif)
         view.addSubview(connectLabel)
         view.addSubview(connectButton)
         view.addSubview(disconnectButton)
@@ -134,8 +141,9 @@ class ViewController: UIViewController {
         view.addSubview(trackLabel)
         view.addSubview(pauseAndPlayButton)
         let constant: CGFloat = 16.0
+        loginBackgroundGif.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         connectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        connectButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        connectButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 300).isActive = true
         disconnectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         disconnectButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
         connectLabel.centerXAnchor.constraint(equalTo: connectButton.centerXAnchor).isActive = true
@@ -168,6 +176,7 @@ class ViewController: UIViewController {
 
     func updateViewBasedOnConnected() {
         if appRemote.isConnected == true {
+            loginBackgroundGif.isHidden = true
             connectButton.isHidden = true
             disconnectButton.isHidden = false
             connectLabel.isHidden = true
@@ -177,6 +186,7 @@ class ViewController: UIViewController {
         } else { //show login
             disconnectButton.isHidden = true
             connectButton.isHidden = false
+            loginBackgroundGif.isHidden = false
             connectLabel.isHidden = false
             imageView.isHidden = true
             trackLabel.isHidden = true
